@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { MemoryRouter } from "react-router-dom";
 import {
   describe,
   it,
@@ -53,9 +54,17 @@ describe("App", () => {
     vi.restoreAllMocks();
   });
 
+  const renderApp = () => {
+    return render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+  };
+
   it("filters runs by status", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     await screen.findByText("Auth refactor");
 
@@ -70,7 +79,7 @@ describe("App", () => {
 
   it("opens run details when a card is clicked", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     await screen.findByText("Auth refactor");
 
@@ -87,7 +96,7 @@ describe("App", () => {
 
   it("shows an empty state when no runs match and resets filters", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     await screen.findByText("Auth refactor");
 
@@ -116,7 +125,7 @@ describe("App", () => {
 
   it("sorts runs by date in ascending and descending order", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderApp();
 
     await screen.findByText("Auth refactor");
 

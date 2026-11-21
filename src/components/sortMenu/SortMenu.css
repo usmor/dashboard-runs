@@ -30,6 +30,7 @@
   padding: 4px;
   border: 1px solid var(--dark-blue);
   border-radius: 8px;
+  color: var(--dark-blue);
   background: var(--beige);
   list-style-type: none;
 }
