@@ -1,0 +1,107 @@
+.app {
+  min-height: 100vh;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 50px;
+  margin-inline: 100px;
+  border: 2px solid var(--dark-blue);
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.app-main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  min-width: 0; 
+}
+
+.main-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+
+.main-description {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.runs-settings {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.runs {
+  min-width: 0; 
+  width: 100%;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.empty-state h3,
+.empty-state p {
+  margin: 0
+}
+
+.empty-state p {
+  color: var(--dark-gray);
+}
+
+.empty-state-button {
+  margin-top: 10px;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+  color: var(--beige);
+  cursor: pointer;
+}
+
+.empty-state-button:hover {
+  opacity: 0.85;
+}
+
+@media (width <= 1024px) {
+  .app-content {
+    margin-inline: 20px;
+  }
+}
+
+@media (width <= 768px) {
+  .app-content {
+    display: block;
+  }
+
+  .app-main {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .main-header {
+    margin-bottom: 24px;
+  }
+}
+
+@media (width <= 1150px) {
+  .runs-settings {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

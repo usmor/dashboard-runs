@@ -1,0 +1,27 @@
+.status-badge {
+  display: inline-block;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px 5px;
+  white-space: nowrap;
+}
+
+.status-badge--queued {
+  background-color: #fff3d6;
+  color: #986b13;
+}
+
+.status-badge--running {
+  background-color: #e3edff;
+  color: #315fba;
+}
+
+.status-badge--succeeded {
+  background-color: #e0f2e6;
+  color: #287744;
+}
+
+.status-badge--failed {
+  background-color: #fce5e3;
+  color: #b83b32;
+}

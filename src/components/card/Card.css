@@ -1,0 +1,82 @@
+.card {
+  padding: 16px 15px;
+  border-bottom: 1px solid var(--dark-blue);
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--dark-beige);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--dark-blue);
+  outline-offset: -2px;
+}
+
+.card-name {
+  min-width: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+.card > span {
+  min-width: 0;
+}
+
+@media (min-width: 769px) {
+  .card > span:nth-child(3) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (width <= 768px) {
+  .card {
+    background-color: var(--beige);
+    border: 1px solid var(--dark-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+    min-width: 0;
+  }
+
+  .card-name {
+    font-size: 18px;
+    margin: 0 0 4px 0;
+    width: 100%;
+    color: var(--dark-blue);
+  }
+
+  .card > span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    font-size: 14px;
+    color: var(--dark-blue);
+    overflow-wrap: anywhere;
+    white-space: normal; 
+    overflow: visible;
+    width: 100%;
+  }
+
+  .card > span::before {
+    content: attr(data-label);
+    color: var(--dark-gray);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .card-status {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}

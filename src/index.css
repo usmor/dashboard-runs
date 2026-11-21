@@ -1,0 +1,28 @@
+
+* {
+  box-sizing: border-box;
+  --dark-blue: #0d1b32;
+  --beige: #faf8f5;
+  --gray: #c1c9d5;
+  --dark-gray: #888;
+  --dark-beige: #f0ede8;
+  --runs-grid-columns:
+    minmax(180px, 1.4fr)
+    minmax(130px, 1fr)
+    minmax(180px, 1.4fr)
+    minmax(160px, 1.2fr)
+    minmax(90px, 0.7fr)
+    minmax(110px, 0.8fr);
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background-color: var(--beige);
+  color: var(--dark-blue);
+}
+
+button,
+input {
+  font: inherit;
+}
