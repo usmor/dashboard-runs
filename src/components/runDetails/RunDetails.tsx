@@ -40,7 +40,7 @@ export const RunDetails = ({ run, onClose }: RunDetailsProps) => {
 
             <div className="drawer-info">
               <span>Status</span>
-              <div className="card-status">
+              <div className="drawer-status">
                 <StatusBadge status={run.status} />
               </div>
             </div>

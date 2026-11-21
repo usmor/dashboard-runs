@@ -90,7 +90,7 @@
   color: var(--dark-blue);
 }
 
-.drawer-info .card-status {
+.drawer-info .drawer-status {
   justify-self: end;
 }
 
